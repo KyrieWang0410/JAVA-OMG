@@ -1,0 +1,19 @@
+server:
+  port: 8005
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/jpa_demo
+    username: root
+    password: root
+  jpa:
+    show-sql: true #操作实体对象时，是否打印sql
+    database-platform: org.hibernate.dialect.MySQL8Dialect
+    open-in-view: true
+    hibernate:
+      ddl-auto: none
+  flyway:
+    locations: classpath:db/migration #flyway默认位置
+
+
+

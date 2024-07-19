@@ -1,0 +1,12 @@
+server:
+  port: 8006
+spring:
+  datasource:
+    druid:
+      db-type: com.alibaba.druid.pool.DruidDataSource
+      driverClassName: com.mysql.cj.jdbc.Driver
+      url: jdbc:mysql://localhost:3306/quartz_jobs?characterEncoding=utf-8&serverTimezone=UTC
+      username: root
+      password: root
+
+
