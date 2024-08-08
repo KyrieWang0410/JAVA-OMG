@@ -3,14 +3,9 @@ package com.example;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-/**
- * 项目启动器
- *
- * @author Kyrie.Wang
- */
 @SpringBootApplication
-public class SpringDataRedisStarter {
+public class RocketMQAppStarter {
     public static void main(String[] args) {
-        SpringApplication.run(SpringDataRedisStarter.class, args);
+        SpringApplication.run(RocketMQAppStarter.class, args);
     }
 }

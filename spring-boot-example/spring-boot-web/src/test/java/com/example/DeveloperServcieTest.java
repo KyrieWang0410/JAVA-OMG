@@ -32,6 +32,7 @@ class DeveloperServcieTest {
     @Test
     void testYmal() {
         // vm参数增加 -Dspring.profiles.active=dev 后运行 或 @ActiveProfiles("dev") 指定配置文件
+        developerServcie.findAll();
         log.info(developer.toString());
         log.info("输出名字===> {}", developer.getLastName());
     }
@@ -41,7 +42,7 @@ class DeveloperServcieTest {
      */
     @Test
     void testAop() {
-        int i = 1 / 0;
-        log.info("111");
+        //int i = 1 / 0;
+        log.info(String.valueOf(1));
     }
 }

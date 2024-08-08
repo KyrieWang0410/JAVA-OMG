@@ -10,10 +10,10 @@ import org.apache.ibatis.annotations.Select;
 @Mapper
 public interface CommonMapper extends BaseMapper<Object> {
     /**
-     * 查询sql执行语句
+     * 查询sql版本
      *
-     * @return 返回sql执行语句
+     * @return 数据库版本号
      */
-    @Select("SELECT 123")
+    @Select("SELECT VERSION()")
     String queryDataBaseVserion();
 }
