@@ -12,7 +12,7 @@ import java.net.Socket;
 @SpringBootTest
 @Slf4j
 @RequiredArgsConstructor(onConstructor = @__(@Autowired))
-public class RocketMQTest {
+class RocketMQTest {
 
     @Test
     void test1() {

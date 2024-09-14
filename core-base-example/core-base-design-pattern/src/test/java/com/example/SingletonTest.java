@@ -6,6 +6,10 @@ import lombok.extern.slf4j.Slf4j;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
+/**
+ * 单例模式测试类
+ * 单例模式：确保一个类只有一个实例，并提供一个全局访问点
+ */
 @SpringBootTest
 @Slf4j
 class SingletonTest {
@@ -47,7 +51,7 @@ class SingletonTest {
      * 测试线双重检查锁定（Double-Checked Locking）来实现懒加载和线程安全
      */
     @Test
-    void TestSingletonDoubleCheckedLock(){
+    void TestSingletonDoubleCheckedLock() {
         new Thread(() -> {
             SingletonDoubleCheckedLock singletonDoubleCheckedLock = SingletonDoubleCheckedLock.getInstance("FOO");
             log.info(singletonDoubleCheckedLock.value);

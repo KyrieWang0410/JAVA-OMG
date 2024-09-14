@@ -17,7 +17,7 @@ class AdapterTest {
 
     @Test
     void test() {
-        // Round fits round, no surprise.
+        // Round fits, no surprise.
         RoundHole hole = new RoundHole(5);
         RoundPeg rpeg = new RoundPeg(5);
         if (hole.fits(rpeg)) {
