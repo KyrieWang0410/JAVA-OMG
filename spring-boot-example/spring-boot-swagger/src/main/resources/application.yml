@@ -1,7 +1,0 @@
-server:
-  port: 8002
-spring:
-  mvc:
-    pathmatch:
-      matching-strategy: ant_path_matcher
-
