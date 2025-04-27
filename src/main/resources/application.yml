@@ -13,3 +13,9 @@ spring:
     init:
       schema-locations: classpath:db/schema-h2.sql
       data-locations: classpath:db/data-h2.sql
+  data:
+    redis:
+      host: dev.example.com
+      port: 6379
+      password: '@XnhiuhtU8_i'
+      database: 0

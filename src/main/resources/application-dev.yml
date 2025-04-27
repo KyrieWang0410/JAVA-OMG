@@ -1,6 +1,7 @@
-server:
-  port: 8090
 spring:
-  mvc:
-    servlet:
-      path: /api/v1
+  data:
+    redis:
+      host: dev.example.com
+      port: 9107
+      password: '@XnhiuhtU8_i'
+      database: 0
