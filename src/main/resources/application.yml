@@ -5,17 +5,17 @@ spring:
     servlet:
       path: /api/v1
   datasource:
-    driver-class-name: org.h2.Driver
-    url: jdbc:h2:mem:testdb;DB_CLOSE_DELAY=-1
-    username: sa
-    password:
-  sql:
-    init:
-      schema-locations: classpath:db/schema-h2.sql
-      data-locations: classpath:db/data-h2.sql
+    url: jdbc:mysql://dev.example.com:3306/testDB?useSSL=false&serverTimezone=UTC
+    username: root
+    password: 'ZZ0jQ@x@'
+    driver-class-name: com.mysql.cj.jdbc.Driver
   data:
     redis:
       host: dev.example.com
       port: 6379
       password: '@XnhiuhtU8_i'
       database: 0
+mybatis-plus:
+  configuration:
+    map-underscore-to-camel-case: false
+  mapper-locations: classpath:/mapper/**.xml
