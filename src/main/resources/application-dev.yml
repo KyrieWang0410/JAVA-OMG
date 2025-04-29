@@ -1,7 +1,6 @@
 spring:
+  datasource:
+    url: jdbc:mysql://dev.example.com:9106/testDB?useSSL=false&serverTimezone=UTC
   data:
     redis:
-      host: dev.example.com
       port: 9107
-      password: '@XnhiuhtU8_i'
-      database: 0

@@ -17,8 +17,11 @@ class MyBatisPlusTest {
 
     private final UserMapper userMapper;
 
+
     @Test
     void queryTest() {
         log.info("MySQL版本查询为{}", userMapper.queryVersion());
     }
+
+
 }
