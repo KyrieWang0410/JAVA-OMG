@@ -20,7 +20,7 @@ class MyBatisPlusTest {
 
     @Test
     void queryTest() {
-        log.info("MySQL版本查询为{}", userMapper.queryVersion());
+        log.info("MySQL版本查询为{}", userMapper.queryAll());
     }
 
 
