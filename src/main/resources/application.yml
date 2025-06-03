@@ -1,14 +1,36 @@
 server:
   port: 8080
+logging:
+  level:
+    com.baomidou.mybatisplus: DEBUG
+    com.demo.mapper: DEBUG
 spring:
   mvc:
     servlet:
       path: /api/v1
   datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
     url: jdbc:mysql://dev.example.com:3306/testDB?useSSL=false&serverTimezone=UTC
     username: root
     password: 'ZZ0jQ@x@'
-    driver-class-name: com.mysql.cj.jdbc.Driver
+    druid:
+      initial-size: 5
+      min-idle: 5
+      max-active: 20
+      filters: stat,wall,slf4j
+      filter:
+        slf4j:
+          enabled: true
+          statement-executable-sql-log-enable: true
+      stat-view-servlet:
+        enabled: true
+        url-pattern: /druid/*
+        login-username: admin
+        login-password: admin
+      web-stat-filter:
+        enabled: true
+        url-pattern: /*
+        exclusions: "*.js,*.css,/druid/*"
   data:
     redis:
       host: dev.example.com
