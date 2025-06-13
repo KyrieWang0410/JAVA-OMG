@@ -1,7 +1,7 @@
 package com.demo.controller;
 
-import com.demo.domain.User;
-import com.demo.service.UserService;
+import com.demo.entity.SysUser;
+import com.demo.service.SysUserService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -9,14 +9,14 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("/user")
+@RequestMapping("/users")
 @RequiredArgsConstructor
-public class UserController {
+public class SysUserController {
 
-    private final UserService userService;
+    private final SysUserService sysUserService;
 
     @GetMapping(value = "/{id}")
-    public User getUserById(@PathVariable Long id) {
-        return userService.getUserById(id);
+    public SysUser getUserById(@PathVariable Long id) {
+        return sysUserService.getUserById(id);
     }
 }

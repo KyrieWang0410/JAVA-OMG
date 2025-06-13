@@ -1,6 +1,6 @@
 package com.demo;
 
-import com.demo.domain.User;
+import com.demo.entity.User;
 import com.demo.mapper.UserMapper;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
