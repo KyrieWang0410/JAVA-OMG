@@ -27,3 +27,6 @@ mybatis-plus:
     db-config:
       id-type: auto
   mapper-locations: classpath:/mapper/**.xml
+jwt:
+  secret: "dGhpcyBpcyBhIDI1Ni1iaXQgc3VwZXIgc2VjcmV0IGtleSEh"
+  expiration: 86400000

@@ -1,12 +1,21 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
-<mapper namespace="com.demo.mapper.SysUserMapper">
-    <select id="queryVersion" resultType="string">
-        SELECT @@version
+<mapper namespace="com.demo.mapper.UserMapper">
+
+    <select id="findUserByIdentifier" parameterType="string" resultType="com.demo.entity.SysUser">
+        SELECT * FROM sys_user WHERE uuid = #{uuid}
     </select>
 
-    <select id="queryAll" resultType="com.demo.entity.SysUser">
-        SELECT * FROM user WHERE age > 20
+    <select id="findUserPermissions" resultType="java.lang.String">
+        SELECT DISTINCT p.perm_key AS permission
+        FROM sys_user u
+        LEFT JOIN sys_user_role ur ON u.id = ur.user_id
+        LEFT JOIN sys_role r ON ur.role_id = r.id
+        LEFT JOIN sys_role_permission rp ON r.id = rp.role_id
+        LEFT JOIN sys_permission p ON rp.perm_id = p.id
+        WHERE u.id = 1
+        AND p.perm_key IS NOT NULL
     </select>
+
 </mapper>
